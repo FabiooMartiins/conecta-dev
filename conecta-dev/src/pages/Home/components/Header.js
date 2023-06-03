@@ -1,19 +1,20 @@
 import React from 'react';
+import {AppBar, Toolbar} from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+    appBar:{
+        boxShadow: 'none'
+    }
+})
 
 function Header() {
+    const classes = useStyles();
     return (
-        <header className='header'>
-            <div className='toolbar'>
-                <div>
-                    <a href='/'>Conecta Dev</a>
-                </div>
-                <div>
-                    <button>Novo Post</button>
-                    <span>img1</span>
-                    <span>img2</span>
-                </div>
-            </div>
-        </header>
+        <AppBar position='fixed' color='inherit' className={classes.appBar}>
+            <Toolbar>
+            </Toolbar>
+        </AppBar>
     )
 }
 
